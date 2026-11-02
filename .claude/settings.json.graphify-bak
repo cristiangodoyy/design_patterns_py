@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && uv run --quiet --group tests python .claude/hooks/check_docs_in_sync.py",
+            "timeout": 120,
+            "statusMessage": "Checking docs are in sync with the examples..."
+          }
+        ]
+      }
+    ]
+  }
+}

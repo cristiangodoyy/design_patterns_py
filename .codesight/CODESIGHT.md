@@ -1,0 +1,345 @@
+# design_patterns_py — AI Context Map
+
+> **Stack:** raw-http | none | unknown | python
+
+> 0 routes | 0 models | 0 components | 48 lib files | 0 env vars | 2 middleware | 0% test coverage
+> **Token savings:** this file is ~3,000 tokens. Without it, AI exploration would cost ~18,200 tokens. **Saves ~15,200 tokens per conversation.**
+> **Last scanned:** 2026-10-21 01:48 — re-run after significant changes
+
+---
+
+# Libraries
+
+- `behavioral/observer/kpi_dashboard_before_observer.py`
+  - function client: () -> None
+  - class KPIName
+  - class KPI
+  - class Dashboard
+- `behavioral/observer/kpi_dashboard_with_observer.py`
+  - function client: () -> None
+  - class KPISource
+  - class Observer
+  - class Subject
+  - class KPIs
+  - class KPIObserver
+  - _...2 more_
+- `behavioral/state/state_power_before_state.py`
+  - function client: () -> None
+  - class PowerStatus
+  - class InvalidTransitionError
+  - class Computer
+- `behavioral/state/state_power_with_state.py`
+  - function client: () -> None
+  - class InvalidTransitionError
+  - class ComputerState
+  - class Off
+  - class On
+  - class Suspended
+  - _...2 more_
+- `behavioral/strategy/shipping_cost_before_strategy.py`
+  - function format_cents: (cents) -> str
+  - function client: () -> None
+  - class Shipper
+  - class Order
+  - class ShippingCost
+- `behavioral/strategy/shipping_cost_with_strategy.py`
+  - function format_cents: (cents) -> str
+  - function client: () -> None
+  - class Order
+  - class AbsStrategy
+  - class FedExStrategy
+  - class UPSStrategy
+  - _...2 more_
+- `behavioral/template_method/compiler_before_template_method.py`
+  - function client: () -> None
+  - class IOSCompiler
+  - class AndroidCompiler
+- `behavioral/template_method/compiler_with_template_method.py`
+  - function client: () -> None
+  - class Compiler
+  - class IOSCompiler
+  - class AndroidCompiler
+- `behavioral/template_method/travel_agency_before_template_method.py`
+  - function client: () -> None
+  - class TripKind
+  - class VeniceTrip
+  - class MaldivesTrip
+  - class TravelAgency
+- `behavioral/template_method/travel_agency_with_template_method.py`
+  - function client: () -> None
+  - class Trip
+  - class VeniceTrip
+  - class MaldivesTrip
+  - class TravelAgency
+- `creational/abstract_factory/cars_before_abstract_factory.py`
+  - function make_car: (maker, edition) -> Car
+  - function client: () -> None
+  - class Maker
+  - class Edition
+  - class FordFiesta
+  - class FordMustang
+  - _...4 more_
+- `creational/abstract_factory/cars_with_abstract_factory.py`
+  - function factory_for: (maker) -> AbsFactory
+  - function drive_lineup: (factory) -> None
+  - function client: () -> None
+  - class Maker
+  - class AbsCar
+  - class FordFiesta
+  - _...8 more_
+- `creational/builder/computer_build_before_builder.py`
+  - function client: () -> None
+  - class Computer
+  - class MyComputerBuilder
+- `creational/builder/computer_encapsulated_before_builder.py`
+  - function client: () -> None
+  - class Computer
+  - class MyComputerBuilder
+- `creational/builder/computer_long_constructor_before_builder.py` — function client: () -> None, class Computer
+- `creational/builder/computer_public_attributes_before_builder.py` — function client: () -> None, class Computer
+- `creational/builder/computer_with_builder.py`
+  - function client: () -> None
+  - class Computer
+  - class AbsBuilder
+  - class LenovoBuilder
+  - class HPBuilder
+  - class Director
+- `creational/factory/cars_before_factory.py`
+  - function get_car: (car_name) -> Car
+  - function client: () -> None
+  - class ChevyVolt
+  - class FordFusion
+  - class JeepSahara
+  - class NullCar
+- `creational/factory/cars_with_factory_method.py`
+  - function load_factory: (factory_name) -> AbsFactory
+  - function client: () -> None
+  - class AbsAuto
+  - class ChevyVolt
+  - class FordFusion
+  - class JeepSahara
+  - _...4 more_
+- `creational/factory/cars_with_simple_factory.py`
+  - function default_auto_factory: () -> AutoFactory
+  - function client: () -> None
+  - class AbsAuto
+  - class ChevyVolt
+  - class FordFusion
+  - class JeepSahara
+  - _...2 more_
+- `creational/prototype/computer_before_prototype.py`
+  - function client: () -> None
+  - class MainBoard
+  - class Tower
+- `creational/prototype/computer_with_deep_copy_prototype.py`
+  - function client: () -> None
+  - class AbsPrototype
+  - class AbsComputer
+  - class MainBoard
+  - class Laptop
+  - class Tower
+- `creational/prototype/computer_with_registry_prototype.py`
+  - function client: () -> None
+  - class AbsPrototype
+  - class AbsComputer
+  - class MainBoard
+  - class Laptop
+  - class Tower
+  - _...1 more_
+- `creational/prototype/computer_with_shallow_copy_prototype.py`
+  - function client: () -> None
+  - class AbsPrototype
+  - class AbsComputer
+  - class MainBoard
+  - class Laptop
+  - class Tower
+- `creational/singleton/logger_before_singleton.py`
+  - function create_order: (order_id) -> None
+  - function charge_card: (order_id) -> None
+  - function client: () -> None
+  - class Logger
+- `creational/singleton/logger_with_base_class_singleton.py`
+  - function client: () -> None
+  - class Singleton
+  - class Logger
+  - class AuditLogger
+- `creational/singleton/logger_with_classic_singleton.py`
+  - function client: () -> None
+  - class Logger
+  - class LazyLogger
+- `creational/singleton/logger_with_metaclass_singleton.py`
+  - function client: () -> None
+  - class SingletonMeta
+  - class Logger
+- `creational/singleton/logger_with_monostate_singleton.py`
+  - function client: () -> None
+  - class Borg
+  - class Logger
+  - class AuditLogger
+- `structural/adapter/customers_before_adapter.py`
+  - function describe: (customers) -> list[str]
+  - function client: () -> None
+  - class Customer
+- `structural/adapter/customers_vendors_before_adapter.py`
+  - function describe: (kind) -> list[str]
+  - function client: () -> None
+  - class Customer
+  - class Vendor
+- `structural/adapter/customers_vendors_with_class_adapter.py`
+  - function describe: (entities) -> list[str]
+  - function client: () -> None
+  - class Addressable
+  - class Customer
+  - class Vendor
+  - class VendorAdapter
+- `structural/adapter/customers_vendors_with_object_adapter.py`
+  - function describe: (entities) -> list[str]
+  - function client: () -> None
+  - class Addressable
+  - class Customer
+  - class Vendor
+  - class Employee
+  - _...2 more_
+- `structural/bridge/subscription_before_bridge.py`
+  - function add_months: (start, months) -> date
+  - function format_cents: (cents) -> str
+  - function describe: (subscriptions) -> list[str]
+  - function client: () -> None
+  - class Subscription
+  - class Annual
+  - _...1 more_
+- `structural/bridge/subscription_discount_before_bridge.py`
+  - function add_months: (start, months) -> date
+  - function format_cents: (cents) -> str
+  - function describe: (subscriptions) -> list[str]
+  - function client: () -> None
+  - class Subscription
+  - class Annual
+  - _...5 more_
+- `structural/bridge/subscription_discount_with_bridge.py`
+  - function add_months: (start, months) -> date
+  - function format_cents: (cents) -> str
+  - function describe: (subscriptions) -> list[str]
+  - function client: () -> None
+  - class Discount
+  - class NoDiscount
+  - _...5 more_
+- `structural/composite/family_before_composite.py`
+  - function age_on: (birthdate, reference) -> tuple[int, int]
+  - function find_oldest: (family, singles) -> Person
+  - function client: () -> None
+  - class Person
+  - class Family
+- `structural/composite/family_with_composite.py`
+  - function age_on: (birthdate, reference) -> tuple[int, int]
+  - function client: () -> None
+  - class Component
+  - class Individual
+  - class Person
+  - class NullPerson
+  - _...1 more_
+- `structural/decorator/cars_before_decorator.py`
+  - function format_cents: (cents) -> str
+  - function describe: (cars) -> list[str]
+  - function client: () -> None
+  - class AbsCar
+  - class Economy
+  - class Luxury
+  - _...1 more_
+- `structural/decorator/cars_with_decorator.py`
+  - function format_cents: (cents) -> str
+  - function describe: (car) -> str
+  - function client: () -> None
+  - class OptionCategory
+  - class AbsCar
+  - class Economy
+  - _...9 more_
+- `structural/decorator/pizza_before_decorator.py`
+  - function format_cents: (cents) -> str
+  - function describe: (pizza) -> str
+  - function client: () -> None
+  - class AbsPizza
+  - class VeganPizza
+  - class NonVeganPizza
+  - _...4 more_
+- `structural/decorator/pizza_with_decorator.py`
+  - function format_cents: (cents) -> str
+  - function describe: (pizza) -> str
+  - function client: () -> None
+  - class AbsPizza
+  - class VeganPizza
+  - class NonVeganPizza
+  - _...4 more_
+- `structural/facade/schedule_server_before_facade.py`
+  - function client: () -> None
+  - class Bootloader
+  - class ExecutionContext
+  - class ListenerRegistry
+  - class SystemObjects
+  - class ProcessManager
+- `structural/facade/schedule_server_with_facade.py`
+  - function client: () -> None
+  - class Bootloader
+  - class ExecutionContext
+  - class ListenerRegistry
+  - class SystemObjects
+  - class ProcessManager
+  - _...1 more_
+- `structural/flyweight/collider_events_before_flyweight.py`
+  - function raw_record: (index) -> str
+  - function parse_event: (record) -> Event
+  - function generate_events: (count) -> list[Event]
+  - function total_size: (objects) -> int
+  - function client: () -> None
+  - class Event
+- `structural/flyweight/collider_events_with_flyweight.py`
+  - function raw_record: (index) -> str
+  - function parse_event: (factory, record) -> Event
+  - function generate_events: (factory, count) -> list[Event]
+  - function total_size: (objects) -> int
+  - function client: () -> None
+  - class ParticleType
+  - _...2 more_
+- `structural/proxy/employee_access_before_proxy.py`
+  - function employee_details: (employees, Employee], access, AccessControl], empids, requester_id) -> list[str]
+  - function format_cents: (cents) -> str
+  - function sample_employees: () -> dict[int, Employee]
+  - function sample_access: () -> dict[int, AccessControl]
+  - function client: () -> None
+  - class Employee
+  - _...1 more_
+- `structural/proxy/employee_access_with_proxy.py`
+  - function format_employee: (info) -> str
+  - function format_cents: (cents) -> str
+  - function sample_employees: () -> dict[int, Employee]
+  - function sample_access: () -> AccessControlList
+  - function client: () -> None
+  - class Employee
+  - _...7 more_
+
+---
+
+# Config
+
+## Config Files
+
+- `pyproject.toml`
+
+---
+
+# Middleware
+
+## custom
+- shipping_cost_before_strategy — `behavioral/strategy/shipping_cost_before_strategy.py`
+- shipping_cost_with_strategy — `behavioral/strategy/shipping_cost_with_strategy.py`
+
+---
+
+# Test Coverage
+
+> **0%** of routes and models are covered by tests
+> 3 test files found
+
+---
+
+_Generated by [codesight](https://github.com/Houseofmvps/codesight) — see your codebase clearly_
